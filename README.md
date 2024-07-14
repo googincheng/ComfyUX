@@ -9,12 +9,12 @@ Aim to improve user experience of ComfyUI
 ![ComfyUX](screenshot1.png)
 
 ## 安装教程
-- [下载ComfyUX](https://github.com/googincheng/ComfyUX/release/latest/)
+- [下载ComfyUX](https://github.com/googincheng/ComfyUX/releases/latest/)
 - 解压至"（你的ComfyUI路径）/custom_nodes" 目录下
 - 重启ComfyUI
 
 ## Install
-- [Download ComfyUX](https://github.com/googincheng/ComfyUX/release/latest/)
+- [Download ComfyUX](https://github.com/googincheng/ComfyUX/releases/latest/)
 - Unzip it to "(your ComfyUI path)/custom_nodes" directory
 - Restart ComfyUI
 
