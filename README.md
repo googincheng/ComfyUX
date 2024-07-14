@@ -1,7 +1,7 @@
 ComfyUX
 =======
-- 体验更佳的ComfyUI插件 
-- Aim to improve user experience of ComfyUI
+体验更佳的ComfyUI插件 
+Aim to improve user experience of ComfyUI
 
 [产品文档 Product DOC](https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf)
 
@@ -28,7 +28,7 @@ ComfyUX
 - Collect high-frequency parameters for easy parameter adjustment later
 - Generated image Gallery
 
-- 如有帮助，请Star这个项目给予作者支持！
-- If it helps, please Star this project to support the author!
+如有帮助，请Star这个项目给予作者支持！
+If it helps, please Star this project to support the author!
 
 [了解更多 More](https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf)
