@@ -28,4 +28,7 @@ Aim to improve user experience of ComfyUI
 - Collect high-frequency parameters for easy parameter adjustment later
 - Generated image Gallery
 
+如有帮助，请Star这个项目给予作者支持！
+If it helps, please Star this project to support the author!
+
 [了解更多 More](https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf)
