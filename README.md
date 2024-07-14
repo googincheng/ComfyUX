@@ -18,7 +18,7 @@ Aim to improve user experience of ComfyUI
 - Unzip it to "(your ComfyUI path)/custom_nodes" directory
 - Restart ComfyUI
 
-## 功能 Feature
+## 功能
 - 节点参数面板
 - 收藏高频参数，便于后期调参
 - 生成图片展示区
@@ -27,3 +27,5 @@ Aim to improve user experience of ComfyUI
 - Node Param panel
 - Collect high-frequency parameters for easy parameter adjustment later
 - Generated image Gallery
+
+[了解更多 More](https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf)
