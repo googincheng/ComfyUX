@@ -2,7 +2,7 @@ ComfyUX
 =======
 体验更佳的ComfyUI插件 Aim to improve user experience of ComfyUI
 
-## [产品文档 Product DOC](https://github.com/googincheng/ComfyUX/release/latest/](https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf)
+[产品文档 Product DOC](https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf)
 
 -----------
 ![ComfyUX](screenshot1.png)
