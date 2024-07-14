@@ -29,7 +29,7 @@ Aim to improve user experience of ComfyUI
 - Generated image Gallery
 
 ## Artist Support
-- [xiongmu](https://openart.ai/workflows/@xiongmu)
+- [@xiongmu - Openart](https://openart.ai/workflows/@xiongmu)
 
 如有帮助，请Star这个项目给予作者支持！
 If it helps, please Star this project to support the author!
