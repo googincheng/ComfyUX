@@ -1,7 +1,7 @@
 ComfyUX
 =======
-体验更佳的ComfyUI插件 
-Aim to improve user experience of ComfyUI
+如果你淹没在上百个节点中，ComfyUX能让你脱离苦海 
+If you are drowning in hundreds of Nodes, ComfyUX can save you from the misery
 
 [产品文档 Product DOC](https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf)
 
