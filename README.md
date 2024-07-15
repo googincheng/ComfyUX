@@ -15,7 +15,7 @@ If you are drowning in hundreds of Nodes, ComfyUX can save you from the misery
 
 ## Background
 - When the workflow is setup, it enters the Batch-Generating stage. It is really painful to find Nodes and Parameters scattered all over the canvas
-- ComfyUX arranges the nodes in order and supports add high-frequency parameters to favorite, to improve the efficiency of fine-tuning when batch drawing
+- ComfyUX arranges the nodes in order and supports add high-frequency parameters to favorite, to improve the efficiency of fine-tuning when Batch-Generating
 - In addition, the collection list can be saved to .json. When sharing your workflow, the author can also share the collection parameters to reduce the learning threshold
 
 ## 安装教程
