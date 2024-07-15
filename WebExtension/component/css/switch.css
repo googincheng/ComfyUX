@@ -1,0 +1,172 @@
+.row {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: var(--space-s);
+    width: 100%;
+    justify-content: center;
+}
+
+.fav{
+    padding: var(--space-s);
+    background: transparent;
+}
+
+.fav:hover{
+    opacity: 0.7;
+}
+
+.fav img{
+    width: 14px;
+    height: 14px;
+}
+
+.switch-container {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--space-m);
+    border-radius: 4px;
+    background-color: var(--background-main);
+    transition: background-color 0.2s;
+}
+
+.switch-container:hover {
+    background-color: var(--background-gray);
+}
+
+/* hover effect start */
+.switch-container::before {
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 0.2),
+            transparent 40%);
+    mix-blend-mode: saturation;
+    z-index: 1;
+}
+
+.switch-container::after {
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 1),
+            transparent 40%);
+    z-index: 3;
+}
+
+.switch-container:hover::before {
+    opacity: 1;
+}
+
+.switch-container::before,
+.switch-container::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+
+/* hover effect end */
+
+.switch-left {
+    display: flex;
+    align-items: center;
+}
+
+.switch-left .icon {
+    margin-right: var(--space-m);
+    align-items: center;
+    display: flex;
+}
+
+.switch-left .icon img {
+    width: 14px;
+    height: 14px;
+}
+
+.switch-left .title {
+    font-size: var(--body-text);
+    color: var(--text-gray);
+    text-overflow: ellipsis;
+    width: 60px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.switch-right {
+    display: flex;
+    align-items: center;
+    margin-top: -2px 0;
+}
+
+.switch-right .hint {
+    margin-right: var(--space-m);
+    font-size: var(--body-text);
+    color: var(--text-gray);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 18px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-gray);
+    transition: .1s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--text-gray);
+    transition: .1s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary);
+}
+
+input:checked + .slider:before {
+    background-color: var(--text-main);
+    transform: translateX(10px);
+}
+
+.switch:hover .slider {
+    background-color: var(--primary3);
+}
+.switch:hover .slider:before {
+    background-color: var(--primary);
+}
+
+.switch:active .slider {
+    background-color: var(--primary);
+}
+
+.switch.disabled .slider {
+    background-color: var(--disable);
+    cursor: not-allowed;
+}

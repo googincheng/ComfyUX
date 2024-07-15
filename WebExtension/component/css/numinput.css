@@ -1,0 +1,148 @@
+.row {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: var(--space-s);
+    width: 100%;
+    justify-content: center;
+}
+
+.fav {
+    padding: var(--space-s);
+    background: transparent;
+}
+
+.fav:hover {
+    opacity: 0.7;
+}
+
+.fav img {
+    width: 14px;
+    height: 14px;
+}
+
+.numinput-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding: var(--space-m);
+    border-radius: 4px;
+    background-color: var(--background-main);
+    transition: background-color 0.2s;
+    cursor: ew-resize;
+}
+
+/* hover effect start */
+.numinput-container::before {
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 0.2),
+            transparent 40%);
+    mix-blend-mode: saturation;
+    z-index: 1;
+}
+
+.numinput-container::after {
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 1),
+            transparent 40%);
+    z-index: 3;
+}
+
+.numinput-container:hover::before {
+    opacity: 1;
+}
+
+.numinput-container::before,
+.numinput-container::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+
+/* hover effect end */
+
+.numinput-left,
+.numinput-right {
+    display: flex;
+    z-index: 5;
+    align-items: center;
+    gap: var(--space-m);
+}
+
+.numinput-left .icon,
+.numinput-right .icon {
+    display: flex;
+    align-items: center;
+}
+
+.numinput-left .icon img,
+.numinput-right .icon img {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.numinput-left .title {
+    font-size: var(--body-text);
+    color: var(--text-gray);
+    width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.numinput-right .number-input {
+    width: 110px;
+    text-align: right;
+    border: 0px solid var(--stroke);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: var(--body-text);
+    color: var(--text-gray);
+    background-color: #ffffff00;
+    transition: background-color 0.2s;
+    gap: var(--space-m);
+    cursor: ew-resize;
+    -moz-appearance: textfield;
+}
+
+.number-input:hover {
+    background-color: var(--hover);
+}
+
+.number-input:focus {
+    background-color: var(--background-gray);
+    color: var(--text-main);
+    outline: none;
+}
+
+.numinput-right .number-input::-webkit-outer-spin-button,
+.numinput-right .number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.numinput-left .icon:hover img,
+.numinput-right .icon:hover img {
+    opacity: 0.6;
+}
+
+.numinput-left .icon:active img,
+.numinput-right .icon:active img {
+    opacity: 1;
+}
+
+.numinput-left .icon.disabled img,
+.numinput-right .icon.disabled img {
+    background-color: var(--disable);
+    cursor: not-allowed;
+}

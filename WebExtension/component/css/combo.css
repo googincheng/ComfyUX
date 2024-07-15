@@ -1,0 +1,169 @@
+.row {
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: var(--space-s);
+    width: 100%;
+    justify-content: center;
+}
+
+.fav{
+    padding: var(--space-s);
+    background: transparent;
+}
+
+.fav:hover{
+    opacity: 0.7;
+}
+
+.fav img{
+    width: 14px;
+    height: 14px;
+}
+
+.combo-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: var(--space-m);
+    position: relative;
+    border-radius: 4px;
+    background-color: var(--background-main);
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* hover effect start */
+.combo-container::before {
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 0.2),
+            transparent 40%);
+    mix-blend-mode: saturation;
+    z-index: 1;
+}
+
+.combo-container::after {
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 1),
+            transparent 40%);
+    z-index: 3;
+}
+
+.combo-container:hover::before {
+    opacity: 1;
+}
+
+.combo-container::before,
+.combo-container::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+
+/* hover effect end */
+
+.combo-container:hover {
+    background-color: var(--background-main);
+}
+
+.combo-left {
+    display: flex;
+    align-items: center;
+}
+
+.combo-icon {
+    width: var(--icon-width);
+    height: var(--icon-height);
+    margin-right: var(--space-m);
+}
+
+.combo-title {
+    font-size: var(--body-text);
+    color: var(--text-gray);
+    width: 60px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.combo-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.combo-value {
+    font-size: var(--body-text);
+    color: var(--text-gray);
+    margin-right: var(--space-m);
+    cursor: pointer;
+    width: 120px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    text-align: right;
+}
+
+.combo-value:hover{
+    color: var(--text-main);
+}
+
+.combo-icon-right {
+    width: var(--icon-width);
+    height: var(--icon-height);
+    cursor: pointer;
+}
+
+.combo-dropdown {
+    margin:var(--space-s) 0;
+    display: none;
+    position: absolute;
+    background-color: var(--background-main);
+    border: 1px solid var(--hover);
+    border-radius: 4px;
+    padding-top: var(--space-m);
+    padding-left: var(--space-m);
+    padding-right: var(--space-m);
+    color: var(--text-gray);
+    font-size: var(--body-text);
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    height: 150px;
+    overflow: scroll;
+    width: 100%;
+}
+
+.combo-dropdown.open {
+    display: block;
+}
+
+.combo-dropdown-item {
+    padding: var(--space-m);
+    cursor: pointer;
+    background-color: var(--background-gray);
+    font-size: var(--body-text);
+    color: var(--text-gray);
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: var(--space-m);
+    transition: background-color 0.2s;
+}
+
+.combo-dropdown-item:hover {
+    color: var(--text-main);
+    background-color: var(--hover);
+}
+
+.combo-dropdown-item.selected {
+    color: var(--text-main);
+    background-color: var(--primary);
+}

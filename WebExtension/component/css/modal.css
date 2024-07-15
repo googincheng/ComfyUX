@@ -1,0 +1,74 @@
+
+.ComfuUX-modal{
+    text-align: center;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000000;
+    background-color: rgba(00, 00, 00, 0.80);
+}
+
+/* Modal container */
+.modal {
+    width: 500px;
+    background-color: var(--background-main);
+    border: var(--stroke);
+    border-radius: 8px;
+    margin: 75px auto 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: var(--space-xl);
+    position: relative;
+}
+
+/* Modal background */
+.modal-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    /* border-radius: 8px; */
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--space-l);
+}
+
+.modal-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: var(--space-m);
+}
+
+.modal-title {
+    font: var(--H1-text);
+    color: var(--text-main);
+}
+
+/* Modal content */
+.modal-content {
+    margin-bottom: var(--space-l);
+    text-align: left;
+    font-size: var(--body-text);
+    line-height: 18px;
+    color: var(--text-gray);
+}
+
+/* Modal footer */
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: var(--space-l);
+}
+
+

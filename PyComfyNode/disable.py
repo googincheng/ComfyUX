@@ -1,0 +1,1 @@
+# todo: compatiable with manager disable 
