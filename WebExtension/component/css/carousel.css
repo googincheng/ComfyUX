@@ -53,6 +53,7 @@
 
 .carousel-thumbnail.selected {
     opacity: 1;
+    outline: none;
 }
 
 .carousel-modal {

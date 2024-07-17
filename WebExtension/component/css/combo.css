@@ -135,15 +135,49 @@
     text-align: center;
     box-sizing: border-box;
     z-index: 1000;
-    top: 100%;
+    top: 0;
     left: 0;
-    height: 150px;
+    max-height: 700px;
     overflow: scroll;
     width: 100%;
+    --topleft-x: 0;
+    --topleft-y: 0;
+    transform: translateX(min(var(--topleft-x), calc(100vw - 100%))) translateY(calc(min(var(--topleft-y), calc(100vh - 100%)) - var(--space-m)));
+    margin-bottom: var(--space-m);
 }
 
 .combo-dropdown.open {
     display: block;
+}
+
+.combo-search {
+    padding: var(--space-m);
+    cursor: pointer;
+    background-color: var(--background-gray);
+    font-size: var(--body-text);
+    color: var(--text-main);
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: var(--space-m);
+    transition: background-color 0.2s;
+}
+
+.combo-search:hover {
+    background-color: var(--hover);
+}
+
+.combo-search:focus {
+    border: 1px solid var(--primary);
+}
+
+.combo-dropdown-item:hover {
+    color: var(--text-main);
+    background-color: var(--hover);
 }
 
 .combo-dropdown-item {
@@ -153,6 +187,7 @@
     font-size: var(--body-text);
     color: var(--text-gray);
     text-align: center;
+    overflow: hidden;
     border-radius: 4px;
     margin-bottom: var(--space-m);
     transition: background-color 0.2s;
@@ -164,6 +199,12 @@
 }
 
 .combo-dropdown-item.selected {
+    outline: none;
     color: var(--text-main);
     background-color: var(--primary);
+}
+
+.highlight {
+    background-color: var(--primary); 
+    color: var(--text-main); 
 }

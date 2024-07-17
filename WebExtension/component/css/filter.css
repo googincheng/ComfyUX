@@ -72,6 +72,7 @@
 .filter-option.selected {
     background-color: var(--primary2);
     color: var(--white);
+    outline: none;
 }
 
 .filter-option.disabled {

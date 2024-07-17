@@ -69,6 +69,7 @@
 .tab-item.selected {
     border-bottom: 1px solid var(--text-main);
     color: var(--text-main);
+    outline: none;
 }
 
 .tab-item.disabled {

@@ -1,1 +1,4 @@
-{"version":"v0.5.1"}
+{
+    "version": "v0.5.2",
+    "description":"Bug 修复<br>· 修复auto queue<br>· 兼容crystool和workspace manager<br>· 下拉框增加自动排序及搜索<br>· 支持折叠侧边栏<br>开发中<br>· 支持删除历史及停止运行<br><br><a href = 'https: //y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf?from=from_copylink' target='_blank'>更新日志 Release Note</a>"
+}

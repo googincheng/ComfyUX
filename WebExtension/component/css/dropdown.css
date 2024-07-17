@@ -30,6 +30,7 @@
 
 .dropdown-title.selected {
   border-bottom: 0.5px solid var(--primary);
+  outline: none;
 }
 
 .dropdown-title:hover{
