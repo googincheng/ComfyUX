@@ -1,5 +1,5 @@
 {
-    "version": "v0.5.3",
-    "description":"【Bug 修复】<br>· 修复button收藏<br>· 修复switch文案<br>· 编辑时自动选中文本<br>【开发中】<br>· 优化搜索框<br>【Bug fix】<br>· Fix button favorite<br>· Fix switch text<br>· Select text on input focus <br>【Developing】<br>· Optimize the searchbox<br><br><a href = 'https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf?from=from_copylink' target='_blank'>更新日志 Release Note</a>"
+    "version": "v0.5.4",
+    "description":"【Bug 修复】<br>· 修复搜索<br>· 修复button收藏<br>· 修复switch文案<br>· 编辑时自动选中文本<br>【开发中】<br>· 优化搜索框<br>【Bug fix】<br>· fix search<br>· Fix button favorite<br>· Fix switch text<br>· Select text on input focus <br>【Developing】<br>· Optimize the searchbox<br><br><a href = 'https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf?from=from_copylink' target='_blank'>更新日志 Release Note</a>"
 }
 

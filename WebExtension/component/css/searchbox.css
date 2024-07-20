@@ -1,5 +1,5 @@
 .searchbox-container {
-    width: 500px;
+    width: 800px;
     max-height: 450px;
     background-color: var(--background-main);
     position: fixed;
@@ -43,16 +43,19 @@
 .searchbox-results {
     display: flex;
     flex: 1;
+    gap: var(--space-m);
+    padding:var(--space-m);
     overflow-y: auto;
 }
 
-.searchbox-results .left,
-.searchbox-results .right {
+.searchbox-results .left{
     flex: 1;
-    padding: var(--space-m);
+    max-height: 320px;
+    overflow-y: scroll;
 }
 
 .searchbox-results .right {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,4 +65,5 @@
     display: flex;
     justify-content: space-around;
     padding: var(--space-m);
+    gap: var(--space-m);
 }
