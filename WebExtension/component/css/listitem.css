@@ -11,6 +11,11 @@
     background-color: var(--background-main);
 }
 
+.list-item.selected {
+    background-color: var(--primary);
+    outline: none;
+}
+
 /* Left Container */
 .list-item-left {
     display: flex;

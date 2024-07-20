@@ -2,10 +2,10 @@ from .PyComfyNode.ComfyUX import ComfyUX
 import os
 import server
 from aiohttp import web
-# from .PyComfyNode.ComfyUXServer import ComfyUXServer
+from .PyComfyNode.ComfyUXServer import ComfyUXServer
 
 example = ComfyUX()
-# comfyUXServer = ComfyUXServer()
+comfyUXServer = ComfyUXServer()
 
 NODE_CLASS_MAPPINGS = {}
 NODE_DISPLAY_NAME_MAPPINGS = {}
