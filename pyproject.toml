@@ -1,7 +1,7 @@
 [project]
 name = "comfyux"
 description = "Better user experience plugin for ComfyUI."
-version = "0.5.4"
+version = "1.0.0"
 license = {file = "LICENSE"}
 
 [project.urls]
