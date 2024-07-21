@@ -32,6 +32,9 @@
     font-size: var(--H2-text);
     color: var(--text-gray);
 }
+.list-item.selected .list-item-name {
+    color: var(--text-main);
+}
 
 .list-item-status {
     font-size: var(--tips-text);
@@ -39,6 +42,10 @@
     color: var(--text-gray);
     border-radius: 10px;
     padding: 2px var(--space-m);
+}
+
+.list-item.selected .list-item-status {
+    color: var(--text-main);
 }
 
 /* Right Container */
