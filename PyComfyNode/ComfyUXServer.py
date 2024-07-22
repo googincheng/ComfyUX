@@ -10,13 +10,9 @@ class ComfyUXServer:
         self.nodesearch_files_path = os.path.join(self.base_dir,'user', 'ComfyUX', 'nodesearch.json')
         self.directory = os.path.dirname(self.nodesearch_files_path)
 
-        if not os.path.exists(self.directory):
-            os.makedirs(self.directory)
-            with open(self.nodesearch_files_path, 'w') as f:
-                f.write('{}')
-
         # 动态添加 GET 和 POST 路由
         # 需要改为comfyux开头，避免冲突
+        self.add_route('POST', '/comfyux_create_nodesearch_files', self.create_nodesearch_files)
         self.add_route('GET', '/comfyux_get_nodesearch_files', self.get_nodesearch_files)
         # self.add_route('GET', '/open_file', self.open_file)
         self.add_route('POST', '/comfyux_store_nodesearch_files', self.store_nodesearch_files)
@@ -34,7 +30,7 @@ class ComfyUXServer:
                 data = json.load(f)
             return web.json_response(data)
         except FileNotFoundError:
-            return web.json_response([], status=404)
+            return web.json_response("【ComfyUX】file not found", status=404)
 
     # async def open_file(self, request):
     #     try:
@@ -56,6 +52,20 @@ class ComfyUXServer:
             return web.json_response({'status': 'success'})
         except json.JSONDecodeError:
             return web.json_response({'status': 'error', 'message': 'Invalid JSON data'}, status=400)
+        
+    async def create_nodesearch_files(self, request):
+        if not os.path.exists(self.directory):
+            print('【ComfyUX】create nodesearch_files_path')
+            os.makedirs(self.directory)
+            with open(self.nodesearch_files_path, 'w') as f:
+                f.write('{}')
+                
+        try:
+            with open(self.nodesearch_files_path, 'r') as f:
+                data = json.load(f)
+            return web.json_response(data)
+        except FileNotFoundError:
+            return web.json_response("【ComfyUX】file not found", status=404)
 
 
 
