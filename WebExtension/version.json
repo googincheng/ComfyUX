@@ -1,4 +1,4 @@
 {
-    "version": "v0.6.0",
+    "version": "v0.5.0",
     "description":"【新功能】<br>· 节点搜索框优化<br>· 节点搜索框支持模糊搜索<br>· 节点搜索结果自动排序<br>【开发中】<br>· 支持中文搜索<br>· 取消运行<br>· 兼容最新版ComfyUI-custom-script<br>【New Features】<br>· Node searchbox optimization<br>· Node searchbox fuzzy search support<br>· Node searchbox auto rank result <br>【Developing】<br>· Support Chinese search<br· Cancel running queue<br>· Compatible with latest ComfyUI-custom-script<br><br><a href = 'https://y3bpnk8e3u.feishu.cn/docx/RFIrd1kcbotTa7xqis5cKiKhnRf?from=from_copylink' target='_blank'>更新日志 Release Note</a>"
 }

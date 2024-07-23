@@ -25,7 +25,6 @@ class ComfyUXServer:
             PromptServer.instance.app.router.add_post(path, handler)
 
     async def get_nodesearch_files(self, request):
-        print('【ComfyUX】get_nodesearch_files')
         try:
             with open(self.nodesearch_files_path, 'r') as f:
                 data = json.load(f)
@@ -46,7 +45,6 @@ class ComfyUXServer:
     #         return web.json_response({'error': 'File not found'}, status=404)
 
     async def store_nodesearch_files(self, request):
-        print('【ComfyUX】store_nodesearch_files')
         try:
             data = await request.json()
             with open(self.nodesearch_files_path, 'w') as f:
@@ -57,7 +55,6 @@ class ComfyUXServer:
         
     async def create_nodesearch_files(self, request):
         if not os.path.exists(self.directory):
-            print('【ComfyUX】create nodesearch_files_path')
             os.makedirs(self.directory)
             with open(self.nodesearch_files_path, 'w') as f:
                 f.write('{}')
