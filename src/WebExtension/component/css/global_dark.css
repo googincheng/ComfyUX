@@ -1,0 +1,73 @@
+:root {
+  /* Color styles */
+  --primary: rgba(41, 72, 242, 1);
+  --primary2: rgba(60, 114, 255, 1);
+  --primary3: rgba(184, 194, 250, 1);
+  --primary4: rgba(32, 64, 236, 1);
+  --white: rgba(255, 255, 255, 1);
+  --orange: rgba(255, 157, 67, 1);
+  --disable: rgba(185, 185, 185, 1);
+  --red: rgba(251, 84, 114, 1);
+  --text-main: rgba(255, 255, 255, 0.80);
+  --text-gray: rgba(255, 255, 255, 0.5);
+  --background-main: rgba(20, 20, 22, 1);
+  --background-gray: rgba(255, 255, 255, 0.05);
+  --hover: rgba(255, 255, 255, 0.10);
+  --stroke: rgba(255, 255, 255, 0.20) 0.5px solid;
+  --pink: rgba(235, 129, 215, 1);
+  --purple: rgba(192, 140, 246, 1);
+  --cyan: rgba(87, 153, 195, 1);
+  --blue: rgba(88, 166, 246, 1);
+  --green: rgba(103, 205, 145, 1);
+  --yellow: rgba(244, 179, 82, 1);
+  --orange: rgba(239, 129, 76, 1);
+
+  /* Text-size styles */
+  /* base size: 正文-12 (12px) */
+  --Highlight-text: 24px;
+  --H1-text: 16px;
+  --H2-text: 12px;
+  --body-text: 12px;
+  --tips-text: 9px;
+  --bold: 600;
+  --icon-width: 14px;
+  --icon-height: 14px;
+  --space-s: 4px;
+  --space-m: 8px;
+  --space-l: 16px;
+  --space-xl: 24px;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: var(--background-main);
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: var(--primary); /* 链接文本颜色 */
+  text-decoration: none; /* 移除下划线 */
+  font-weight: bold; /* 文本加粗 */
+  font-size: var(--body-text);
+  border: 0px solid #ccc; /* 边框 */
+  border-radius: 4px; /* 圆角 */
+  transition: background-color 0.3s; /* 过渡效果 */
+}
+a:link,
+a:visited {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--text-main);
+  background-color: var(--hover);
+}
+
+a:active {
+  color: var(--primary); /* 链接文本颜色 */
+}

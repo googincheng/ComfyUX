@@ -1,0 +1,82 @@
+.filter-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--space-m);
+    position: relative;
+    background-color: var(--background-main);
+    color: var(--text-main);
+    border-bottom: var(--stroke);
+}
+
+/* hover effect start */
+.filter-container::before {
+    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 0.2),
+            transparent 40%);
+    mix-blend-mode: saturation;
+    z-index: 1;
+}
+
+.filter-container::after {
+    background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 1),
+            transparent 40%);
+    z-index: 3;
+}
+
+.filter-container:hover::before {
+    opacity: 1;
+}
+
+.filter-container::before,
+.filter-container::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+
+/* hover effect end */
+
+.filter-options {
+    display: flex;
+    font-size: var(--body-text);
+    flex-wrap: wrap;
+    gap: var(--space-s);
+}
+
+.filter-option {
+    flex: 1 1 calc(25% - var(--space-m));
+    display: flex;
+    gap:var(--space-s);
+    justify-content: center;
+    color: var(--text-gray);
+    border-radius: 4px;
+    padding: var(--space-s);
+    background-color: var(--background-gray);
+    cursor: pointer;
+    z-index: 5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-option:hover {
+    background-color: var(--hover);
+    color: var(--white);
+}
+
+.filter-option.selected {
+    background-color: var(--primary2);
+    color: var(--white);
+    outline: none;
+}
+
+.filter-option.disabled {
+    background-color: var(--disable);
+    color: var(--text-gray);
+    cursor: not-allowed;
+}

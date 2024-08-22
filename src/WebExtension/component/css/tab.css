@@ -1,0 +1,112 @@
+.tab-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.tab-bar {
+    width: 100%;
+    display: flex;
+    position: relative;
+    background-color: var(--background-gray);
+    border-bottom: 1px solid var(--stroke);
+}
+
+/* hover effect start */
+.tab-bar::before {
+    background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 0.2),
+            transparent 40%);
+    mix-blend-mode: saturation;
+    z-index: 1;
+}
+
+.tab-bar::after {
+    background: radial-gradient(200px circle at var(--mouse-x) var(--mouse-y),
+            rgba(0, 255, 255, 1),
+            transparent 40%);
+    z-index: 3;
+}
+
+.tab-bar:hover::before {
+    opacity: 1;
+}
+
+.tab-bar::before,
+.tab-bar::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+}
+/* hover effect end */
+
+.tab-item {
+    flex: 1;
+    padding: var(--space-m);
+    text-align: center;
+    cursor: pointer;
+    font-size: var(--H2-text);
+    z-index: 5;
+    font-weight: var(--bold);
+    color: var(--text-gray);
+    /* background-color: var(--background-main); */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.tab-item:hover {
+    background-color: var(--hover);
+    color: var(--text-main);
+}
+
+.tab-item.selected {
+    border-bottom: 1px solid var(--text-main);
+    color: var(--text-main);
+    outline: none;
+}
+
+.tab-item.disabled {
+    background-color: var(--disable);
+    color: var(--text-gray);
+    cursor: not-allowed;
+}
+
+.tab-content {
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    position: relative;
+}
+
+.tab-panel {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    overflow: scroll;
+    padding-bottom: 140px;
+    transition: left 0.2s ease, opacity 0.2s ease;
+}
+
+.tab-panel.active {
+    left: 0;
+    opacity: 1;
+}
+
+.tab-panel.previous {
+    left: -100%;
+}
+
+.filter-container{
+    width: 100%;
+    height: fit-content;
+}
